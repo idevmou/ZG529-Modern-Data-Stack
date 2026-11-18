@@ -1,6 +1,6 @@
 # Bronze Layer – Ingestion and Raw Storage
 
-*Owner: Member 2 · Code: [src/ingestion.py](../src/ingestion.py), [src/config.py](../src/config.py) · Demo: [notebooks/02_bronze_ingestion.py](../notebooks/02_bronze_ingestion.py)*
+*Owner: Member 1 (Mouli) · Code: [src/ingestion.py](../src/ingestion.py), [src/config.py](../src/config.py) · Demo: [notebooks/02_bronze_ingestion.py](../notebooks/02_bronze_ingestion.py)*
 
 ## 1. Purpose
 The Bronze layer lands source data exactly as received, adds ingestion metadata, and guarantees that no source record is stored twice. Cleaning and typing are deferred to Silver.
