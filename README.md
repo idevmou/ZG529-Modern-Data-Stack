@@ -45,7 +45,7 @@ The current source-preparation and Bronze demo runs locally with Python, PyArrow
 
 - Python 3.10+ recommended.
 - The packages listed in [requirements.txt](requirements.txt).
-- The UCI Online Retail XLSX workbook saved locally (for example, at `data/source/Online Retail.xlsx`).
+- The UCI Online Retail XLSX workbook saved locally (for example, at `data/raw/Online Retail.xlsx`).
 
 Create an environment and install dependencies:
 
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 From the repository root:
 
 ```bash
-python notebooks/01_data_generation.py --xlsx "data/source/Online Retail.xlsx"
+python notebooks/01_data_generation.py --xlsx "data/raw/Online Retail.xlsx"
 ```
 
 This creates monthly transaction CSV batches, a re-delivery test batch and a product catalog under `data/raw/uci_online_retail/`. The XLSX file is a local input and is not included in the repository.
@@ -69,7 +69,7 @@ This creates monthly transaction CSV batches, a re-delivery test batch and a pro
 Equivalent module command:
 
 ```bash
-python src/source_preparation.py --xlsx "data/source/Online Retail.xlsx" --out data/raw
+python src/source_preparation.py --xlsx "data/raw/Online Retail.xlsx" --out data/raw
 ```
 
 ## Run the Bronze demonstration
