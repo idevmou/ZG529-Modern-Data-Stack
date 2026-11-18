@@ -1,0 +1,15 @@
+Delta transaction history of bronze/transactions (time travel / audit)
+
+version 12: MERGE  inserted=25525  updated=0  source_rows=25525
+version 11: MERGE  inserted=84711  updated=0  source_rows=84711
+version 10: MERGE  inserted=60742  updated=0  source_rows=60742
+version 9: MERGE  inserted=50226  updated=0  source_rows=50226
+version 8: MERGE  inserted=35284  updated=0  source_rows=35284
+version 7: MERGE  inserted=39518  updated=0  source_rows=39518
+version 6: MERGE  inserted=36874  updated=0  source_rows=36874
+version 5: MERGE  inserted=37030  updated=0  source_rows=37030
+version 4: MERGE  inserted=29916  updated=0  source_rows=29916
+version 3: MERGE  inserted=36748  updated=0  source_rows=36748
+version 2: MERGE  inserted=27707  updated=0  source_rows=27707
+version 1: MERGE  inserted=35147  updated=0  source_rows=35147
+version 0: WRITE  inserted=None  updated=None  source_rows=None

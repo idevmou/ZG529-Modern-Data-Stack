@@ -1,0 +1,46 @@
+Data lake folder layout (partitioned by source / type / period)
+
+data/landing/
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_001.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_002.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_003.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_004.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_005.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_006.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_007.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_008.json
+    mock_popularity_api/product_popularity/dt=2011-12-09/snapshot_001_page_009.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_001.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_002.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_003.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_004.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_005.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_006.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_007.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_008.json
+    mock_popularity_api/product_popularity/dt=2011-12-16/snapshot_002_page_009.json
+    uci_online_retail/product_catalog/dt=2011-12-09/product_catalog_batch_001.csv
+    uci_online_retail/transactions/dt=2010-12/transactions_batch_001.csv
+    uci_online_retail/transactions/dt=2011-01/transactions_batch_002.csv
+    uci_online_retail/transactions/dt=2011-01/transactions_batch_014_redelivery.csv
+    uci_online_retail/transactions/dt=2011-02/transactions_batch_003.csv
+    uci_online_retail/transactions/dt=2011-03/transactions_batch_004.csv
+    uci_online_retail/transactions/dt=2011-04/transactions_batch_005.csv
+    uci_online_retail/transactions/dt=2011-05/transactions_batch_006.csv
+    uci_online_retail/transactions/dt=2011-06/transactions_batch_007.csv
+    uci_online_retail/transactions/dt=2011-07/transactions_batch_008.csv
+    uci_online_retail/transactions/dt=2011-08/transactions_batch_009.csv
+    uci_online_retail/transactions/dt=2011-09/transactions_batch_010.csv
+    uci_online_retail/transactions/dt=2011-10/transactions_batch_011.csv
+    uci_online_retail/transactions/dt=2011-11/transactions_batch_012.csv
+    uci_online_retail/transactions/dt=2011-12/transactions_batch_013.csv
+data/lake/bronze/
+    ingestion_log/
+    product_catalog/
+    product_popularity/
+    transactions/
+data/rejected/
+    transactions/transactions_batch_099_bad_header.csv
+data/logs/
+    ingestion_20261118_152725.log
+    ingestion_log_export.csv

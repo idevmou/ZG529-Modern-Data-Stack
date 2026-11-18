@@ -1,0 +1,21 @@
+Batch results (OK lines) - incremental load, re-run and re-delivery dedup
+
+2026-11-18 15:27:26,026 | INFO | OK     transactions_batch_001 read=42481 inserted=42481 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:26,131 | INFO | OK     product_catalog_batch_001 read=4070 inserted=4070 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:27,100 | INFO | OK     transactions_batch_002 read=35147 inserted=35147 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:27,732 | INFO | OK     transactions_batch_003 read=27707 inserted=27707 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:28,346 | INFO | OK     transactions_batch_002 read=35147 inserted=0 duplicates_skipped=35147 corrupt=0
+2026-11-18 15:27:28,634 | INFO | OK     transactions_batch_014_redelivery read=1000 inserted=0 duplicates_skipped=1000 corrupt=0
+2026-11-18 15:27:29,818 | INFO | OK     transactions_batch_004 read=36748 inserted=36748 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:30,488 | INFO | OK     transactions_batch_005 read=29916 inserted=29916 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:31,253 | INFO | OK     transactions_batch_006 read=37030 inserted=37030 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:32,021 | INFO | OK     transactions_batch_007 read=36874 inserted=36874 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:32,916 | INFO | OK     transactions_batch_008 read=39518 inserted=39518 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:33,624 | INFO | OK     transactions_batch_009 read=35284 inserted=35284 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:34,623 | INFO | OK     transactions_batch_010 read=50226 inserted=50226 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:35,943 | INFO | OK     transactions_batch_011 read=60742 inserted=60742 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:37,647 | INFO | OK     transactions_batch_012 read=84711 inserted=84711 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:38,414 | INFO | OK     transactions_batch_013 read=25525 inserted=25525 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:48,101 | INFO | OK     product_popularity_snapshot_001 read=4070 inserted=4070 duplicates_skipped=0 corrupt=0
+2026-11-18 15:27:59,243 | INFO | OK     product_popularity_snapshot_001 read=4070 inserted=0 duplicates_skipped=4070 corrupt=0
+2026-11-18 15:28:12,411 | INFO | OK     product_popularity_snapshot_002 read=4070 inserted=4070 duplicates_skipped=0 corrupt=0
