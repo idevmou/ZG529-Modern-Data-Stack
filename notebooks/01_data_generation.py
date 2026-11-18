@@ -1,7 +1,7 @@
 """01 - Source data preparation.
 
 Run from the repository root:
-    python notebooks/01_data_generation.py --xlsx "data/source/Online Retail.xlsx"
+    python notebooks/01_data_generation.py --xlsx "data/raw/Online Retail.xlsx"
 
 This step creates staged CSV batches under data/raw. It does not load data into
 Bronze; delivery and ingestion are handled by notebook 02.
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--xlsx",
         type=Path,
-        default=Path("data/source/Online Retail.xlsx"),
+        default=Path("data/raw/Online Retail.xlsx"),
         help="Path to the UCI Online Retail XLSX workbook.",
     )
     parser.add_argument("--out", type=Path, default=Path("data/raw"), help="Staging output directory.")
