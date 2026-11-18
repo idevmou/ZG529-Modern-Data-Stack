@@ -1,0 +1,24 @@
+Bronze ingestion_log (Delta table)
+
+                         batch_id run_mode  status  rows_read  rows_inserted  rows_duplicate_skipped  rows_corrupt  attempts  duration_sec
+           transactions_batch_001   NORMAL SUCCESS      42481          42481                       0             0         1          0.71
+        product_catalog_batch_001   NORMAL SUCCESS       4070           4070                       0             0         1          0.08
+           transactions_batch_002   NORMAL SUCCESS      35147          35147                       0             0         1          0.68
+           transactions_batch_003   NORMAL SUCCESS      27707          27707                       0             0         1          0.59
+           transactions_batch_002    RERUN SUCCESS      35147              0                   35147             0         1          0.54
+transactions_batch_014_redelivery   NORMAL SUCCESS       1000              0                    1000             0         1          0.10
+transactions_batch_099_bad_header   NORMAL  FAILED          0              0                       0             0         1          0.01
+           transactions_batch_004   NORMAL SUCCESS      36748          36748                       0             0         1          0.69
+           transactions_batch_005   NORMAL SUCCESS      29916          29916                       0             0         1          0.58
+           transactions_batch_006   NORMAL SUCCESS      37030          37030                       0             0         1          0.72
+           transactions_batch_007   NORMAL SUCCESS      36874          36874                       0             0         1          0.71
+           transactions_batch_008   NORMAL SUCCESS      39518          39518                       0             0         1          0.81
+           transactions_batch_009   NORMAL SUCCESS      35284          35284                       0             0         1          0.66
+           transactions_batch_010   NORMAL SUCCESS      50226          50226                       0             0         1          0.95
+           transactions_batch_011   NORMAL SUCCESS      60742          60742                       0             0         1          1.27
+           transactions_batch_012   NORMAL SUCCESS      84711          84711                       0             0         1          1.61
+           transactions_batch_013   NORMAL SUCCESS      25525          25525                       0             0         1          0.69
+  product_popularity_snapshot_001     POLL SUCCESS       4070           4070                       0             0         2          9.05
+  product_popularity_snapshot_001     POLL SUCCESS       4070              0                    4070             0         2          9.08
+  product_popularity_snapshot_002     POLL SUCCESS       4070           4070                       0             0         2         11.10
+  product_popularity_snapshot_003   NORMAL  FAILED          0              0                       0             0         3         12.30

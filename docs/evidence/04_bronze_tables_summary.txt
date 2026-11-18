@@ -1,0 +1,29 @@
+Bronze Delta tables - row counts, schema, NULLs, duplicate keys
+
+transactions: rows=541,909  duplicate_keys=0  columns=15
+   InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country, _source_file, _record_hash, _occurrence_no, _batch_id, _record_type, _source_system, _ingest_ts
+   NULLs: Description=1,454, CustomerID=135,080
+product_catalog: rows=4,070  duplicate_keys=0  columns=11
+   StockCode, Description, AvgUnitPrice, FirstSeen, _source_file, _record_hash, _occurrence_no, _batch_id, _record_type, _source_system, _ingest_ts
+   NULLs: Description=112
+product_popularity: rows=8,140  duplicate_keys=0  columns=12
+   stock_code, popularity_score, sentiment_score, units_sold, as_of, _source_file, _record_hash, _occurrence_no, _batch_id, _record_type, _source_system, _ingest_ts
+   NULLs: 
+
+transactions exact duplicate source lines kept in Bronze: 5,268
+
+transactions rows per batch:
+_batch_id
+transactions_batch_001    42481
+transactions_batch_002    35147
+transactions_batch_003    27707
+transactions_batch_004    36748
+transactions_batch_005    29916
+transactions_batch_006    37030
+transactions_batch_007    36874
+transactions_batch_008    39518
+transactions_batch_009    35284
+transactions_batch_010    50226
+transactions_batch_011    60742
+transactions_batch_012    84711
+transactions_batch_013    25525
