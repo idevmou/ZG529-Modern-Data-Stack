@@ -1,0 +1,108 @@
+2026-11-21 21:00:49,329 | INFO | Logging to D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\logs\ingestion_20261121_210049.log
+2026-11-21 21:00:49,348 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\product_catalog\dt=2011-12-09\product_catalog_batch_001.csv
+2026-11-21 21:00:49,373 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2010-12\transactions_batch_001.csv
+2026-11-21 21:00:49,376 | INFO | START  transactions_batch_001 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2010-12/transactions_batch_001.csv
+2026-11-21 21:00:49,734 | INFO | OK     transactions_batch_001 read=42481 inserted=42481 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:49,755 | INFO | START  product_catalog_batch_001 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/product_catalog/dt=2011-12-09/product_catalog_batch_001.csv
+2026-11-21 21:00:49,807 | INFO | OK     product_catalog_batch_001 read=4070 inserted=4070 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:50,128 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-01\transactions_batch_002.csv
+2026-11-21 21:00:50,150 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-02\transactions_batch_003.csv
+2026-11-21 21:00:50,172 | INFO | SKIP   transactions_batch_001.csv (file already ingested)
+2026-11-21 21:00:50,173 | INFO | START  transactions_batch_002 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-01/transactions_batch_002.csv
+2026-11-21 21:00:50,619 | INFO | OK     transactions_batch_002 read=35147 inserted=35147 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:50,685 | INFO | START  transactions_batch_003 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-02/transactions_batch_003.csv
+2026-11-21 21:00:51,010 | INFO | OK     transactions_batch_003 read=27707 inserted=27707 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:51,046 | INFO | SKIP   product_catalog_batch_001.csv (file already ingested)
+2026-11-21 21:00:51,073 | INFO | START  transactions_batch_002 [RERUN] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-01/transactions_batch_002.csv
+2026-11-21 21:00:51,402 | INFO | OK     transactions_batch_002 read=35147 inserted=0 duplicates_skipped=35147 corrupt=0
+2026-11-21 21:00:51,501 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-01\transactions_batch_014_redelivery.csv
+2026-11-21 21:00:51,532 | INFO | SKIP   transactions_batch_001.csv (file already ingested)
+2026-11-21 21:00:51,533 | INFO | SKIP   transactions_batch_002.csv (file already ingested)
+2026-11-21 21:00:51,533 | INFO | START  transactions_batch_014_redelivery [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-01/transactions_batch_014_redelivery.csv
+2026-11-21 21:00:51,669 | INFO | OK     transactions_batch_014_redelivery read=1000 inserted=0 duplicates_skipped=1000 corrupt=0
+2026-11-21 21:00:51,715 | INFO | SKIP   transactions_batch_003.csv (file already ingested)
+2026-11-21 21:00:51,715 | INFO | SKIP   product_catalog_batch_001.csv (file already ingested)
+2026-11-21 21:00:51,808 | INFO | SKIP   transactions_batch_001.csv (file already ingested)
+2026-11-21 21:00:51,809 | INFO | SKIP   transactions_batch_002.csv (file already ingested)
+2026-11-21 21:00:51,809 | INFO | SKIP   transactions_batch_014_redelivery.csv (file already ingested)
+2026-11-21 21:00:51,809 | INFO | SKIP   transactions_batch_003.csv (file already ingested)
+2026-11-21 21:00:51,809 | INFO | START  transactions_batch_099_bad_header [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-02/transactions_batch_099_bad_header.csv
+2026-11-21 21:00:51,810 | ERROR | FAILED transactions_batch_099_bad_header after 1 attempt(s): Schema mismatch in transactions_batch_099_bad_header.csv: expected ['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'UnitPrice', 'CustomerID', 'Country'], found ['InvoiceNo', 'StockCode', 'Qty']
+2026-11-21 21:00:51,814 | INFO | Moved failed file to D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\rejected\transactions\transactions_batch_099_bad_header.csv
+2026-11-21 21:00:51,861 | INFO | SKIP   product_catalog_batch_001.csv (file already ingested)
+2026-11-21 21:00:51,946 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-03\transactions_batch_004.csv
+2026-11-21 21:00:51,969 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-04\transactions_batch_005.csv
+2026-11-21 21:00:52,006 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-05\transactions_batch_006.csv
+2026-11-21 21:00:52,033 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-06\transactions_batch_007.csv
+2026-11-21 21:00:52,061 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-07\transactions_batch_008.csv
+2026-11-21 21:00:52,084 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-08\transactions_batch_009.csv
+2026-11-21 21:00:52,155 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-09\transactions_batch_010.csv
+2026-11-21 21:00:52,185 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-10\transactions_batch_011.csv
+2026-11-21 21:00:52,262 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-11\transactions_batch_012.csv
+2026-11-21 21:00:52,279 | INFO | Delivered D:\BITS-SEM2\Assignments\ZG529-Modern-Data-Stack\data\landing\uci_online_retail\transactions\dt=2011-12\transactions_batch_013.csv
+2026-11-21 21:00:52,316 | INFO | SKIP   transactions_batch_001.csv (file already ingested)
+2026-11-21 21:00:52,317 | INFO | SKIP   transactions_batch_002.csv (file already ingested)
+2026-11-21 21:00:52,317 | INFO | SKIP   transactions_batch_014_redelivery.csv (file already ingested)
+2026-11-21 21:00:52,317 | INFO | SKIP   transactions_batch_003.csv (file already ingested)
+2026-11-21 21:00:52,317 | INFO | START  transactions_batch_004 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-03/transactions_batch_004.csv
+2026-11-21 21:00:52,833 | INFO | OK     transactions_batch_004 read=36748 inserted=36748 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:52,885 | INFO | START  transactions_batch_005 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-04/transactions_batch_005.csv
+2026-11-21 21:00:53,350 | INFO | OK     transactions_batch_005 read=29916 inserted=29916 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:53,404 | INFO | START  transactions_batch_006 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-05/transactions_batch_006.csv
+2026-11-21 21:00:53,979 | INFO | OK     transactions_batch_006 read=37030 inserted=37030 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:54,019 | INFO | START  transactions_batch_007 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-06/transactions_batch_007.csv
+2026-11-21 21:00:54,478 | INFO | OK     transactions_batch_007 read=36874 inserted=36874 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:54,523 | INFO | START  transactions_batch_008 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-07/transactions_batch_008.csv
+2026-11-21 21:00:55,039 | INFO | OK     transactions_batch_008 read=39518 inserted=39518 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:55,079 | INFO | START  transactions_batch_009 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-08/transactions_batch_009.csv
+2026-11-21 21:00:55,566 | INFO | OK     transactions_batch_009 read=35284 inserted=35284 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:55,637 | INFO | START  transactions_batch_010 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-09/transactions_batch_010.csv
+2026-11-21 21:00:56,454 | INFO | OK     transactions_batch_010 read=50226 inserted=50226 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:56,533 | INFO | START  transactions_batch_011 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-10/transactions_batch_011.csv
+2026-11-21 21:00:57,301 | INFO | OK     transactions_batch_011 read=60742 inserted=60742 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:57,347 | INFO | START  transactions_batch_012 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-11/transactions_batch_012.csv
+2026-11-21 21:00:58,218 | INFO | OK     transactions_batch_012 read=84711 inserted=84711 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:58,283 | INFO | START  transactions_batch_013 [NORMAL] source=D:/BITS-SEM2/Assignments/ZG529-Modern-Data-Stack/data/landing/uci_online_retail/transactions/dt=2011-12/transactions_batch_013.csv
+2026-11-21 21:00:58,861 | INFO | OK     transactions_batch_013 read=25525 inserted=25525 duplicates_skipped=0 corrupt=0
+2026-11-21 21:00:58,928 | INFO | SKIP   product_catalog_batch_001.csv (file already ingested)
+2026-11-21 21:00:59,116 | INFO | SKIP   transactions_batch_001.csv (file already ingested)
+2026-11-21 21:00:59,117 | INFO | SKIP   transactions_batch_002.csv (file already ingested)
+2026-11-21 21:00:59,117 | INFO | SKIP   transactions_batch_014_redelivery.csv (file already ingested)
+2026-11-21 21:00:59,117 | INFO | SKIP   transactions_batch_003.csv (file already ingested)
+2026-11-21 21:00:59,117 | INFO | SKIP   transactions_batch_004.csv (file already ingested)
+2026-11-21 21:00:59,118 | INFO | SKIP   transactions_batch_005.csv (file already ingested)
+2026-11-21 21:00:59,118 | INFO | SKIP   transactions_batch_006.csv (file already ingested)
+2026-11-21 21:00:59,118 | INFO | SKIP   transactions_batch_007.csv (file already ingested)
+2026-11-21 21:00:59,118 | INFO | SKIP   transactions_batch_008.csv (file already ingested)
+2026-11-21 21:00:59,118 | INFO | SKIP   transactions_batch_009.csv (file already ingested)
+2026-11-21 21:00:59,119 | INFO | SKIP   transactions_batch_010.csv (file already ingested)
+2026-11-21 21:00:59,119 | INFO | SKIP   transactions_batch_011.csv (file already ingested)
+2026-11-21 21:00:59,119 | INFO | SKIP   transactions_batch_012.csv (file already ingested)
+2026-11-21 21:00:59,119 | INFO | SKIP   transactions_batch_013.csv (file already ingested)
+2026-11-21 21:00:59,120 | INFO | SKIP   product_catalog_batch_001.csv (file already ingested)
+2026-11-21 21:00:59,522 | INFO | POLL cycle 1/3 (snapshot 1)
+2026-11-21 21:00:59,522 | INFO | START  product_popularity_snapshot_001 [POLL] source=http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1
+2026-11-21 21:00:59,745 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=3&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:01,895 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=5&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:04,030 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=7&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:06,206 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=9&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:08,295 | INFO | OK     product_popularity_snapshot_001 read=4070 inserted=4070 duplicates_skipped=0 corrupt=0
+2026-11-21 21:01:10,348 | INFO | POLL cycle 2/3 (snapshot 1)
+2026-11-21 21:01:10,349 | INFO | START  product_popularity_snapshot_001 [POLL] source=http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1
+2026-11-21 21:01:10,436 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=2&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:12,609 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=4&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:14,738 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=6&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:16,887 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=1&page=8&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:19,060 | INFO | OK     product_popularity_snapshot_001 read=4070 inserted=0 duplicates_skipped=4070 corrupt=0
+2026-11-21 21:01:21,119 | INFO | POLL cycle 3/3 (snapshot 2)
+2026-11-21 21:01:21,120 | INFO | START  product_popularity_snapshot_002 [POLL] source=http://127.0.0.1:8765/api/v1/products/popularity?snapshot=2
+2026-11-21 21:01:21,160 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=2&page=1&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:23,314 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=2&page=3&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:25,448 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=2&page=5&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:27,590 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=2&page=7&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:29,722 | WARNING | GET http://127.0.0.1:8765/api/v1/products/popularity?snapshot=2&page=9&page_size=500 failed (attempt 1/3): HTTP 503 -- retrying in 2s
+2026-11-21 21:01:31,857 | INFO | OK     product_popularity_snapshot_002 read=4070 inserted=4070 duplicates_skipped=0 corrupt=0
+2026-11-21 21:01:32,271 | INFO | START  product_popularity_snapshot_003 [NORMAL] source=http://127.0.0.1:9/api/v1/products/popularity?snapshot=3
+2026-11-21 21:01:34,347 | WARNING | GET http://127.0.0.1:9/api/v1/products/popularity?snapshot=3&page=1&page_size=500 failed (attempt 1/3): [WinError 10061] No connection could be made because the target machine actively refused it -- retrying in 2s
+2026-11-21 21:01:38,431 | WARNING | GET http://127.0.0.1:9/api/v1/products/popularity?snapshot=3&page=1&page_size=500 failed (attempt 2/3): [WinError 10061] No connection could be made because the target machine actively refused it -- retrying in 4s
+2026-11-21 21:01:44,506 | ERROR | FAILED product_popularity_snapshot_003 after 3 attempt(s): http://127.0.0.1:9/api/v1/products/popularity?snapshot=3&page=1&page_size=500 unreachable after 3 attempts: [WinError 10061] No connection could be made because the target machine actively refused it

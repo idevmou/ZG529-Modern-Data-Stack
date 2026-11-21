@@ -1,3 +1,5 @@
+* [ ] 
+
 # RecoMart – Modern Data Stack
 
 A collaborative MTech Data Science & Engineering project demonstrating a retail data pipeline from source ingestion through curated analytics and product recommendations.
@@ -12,7 +14,8 @@ See [docs/architecture.md](docs/architecture.md) for the architecture, layer res
 
 ```text
 .
-├── data/                         # Local source, staging, landing and Delta outputs (not committed)
+├── data/
+│   └── lake/bronze/              # Shared Bronze Delta snapshot (committed)
 ├── docs/
 │   ├── architecture.md
 │   ├── bronze_layer.md
@@ -87,13 +90,29 @@ The demo covers initial delivery, incremental batches, re-runs, duplicate re-del
 ## Output directories
 
 The demo creates local outputs under `data/`:
+
 - `raw/`: prepared source batches;
 - `landing/`: delivered CSV files and raw API JSON pages;
 - `lake/bronze/`: Bronze Delta tables and ingestion log;
 - `rejected/`: failed files and malformed input rows;
 - `logs/`: timestamped execution logs and CSV log export.
 
-These generated data files are local runtime artifacts and should not be committed unless the team explicitly selects small evidence files for the report.
+The source, staging, landing, rejected and log files are local runtime artifacts; the Bronze Delta snapshot is the exception and is shared through Git as described below.
+
+## Sharing Bronze data through Git
+
+The generated Bronze Delta tables are intended to be shared under `data/lake/bronze/` so downstream members can use the same snapshot without downloading the source workbook or regenerating the batches. Each table folder must be shared in full, including its `_delta_log/` and Parquet files.
+
+Only the Bronze tables are intended to be committed from `data/`. The source workbook, staged CSVs, landing files, rejected inputs and runtime logs are not needed by downstream members and should remain local. Since `data/` is not ignored, stage the Bronze directory explicitly rather than using `git add data`:
+
+```powershell
+git add data/lake/bronze
+git status --short
+```
+
+Before committing, confirm that only intended `data/lake/bronze/` files are staged. After the snapshot is pushed, teammates can pull the branch and read the tables at the same relative paths. Do not run the Bronze demo with `--reset` in a checkout containing the shared snapshot unless you intend to delete its local Bronze tables and landing data.
+
+The shared snapshot uses local Delta Lake files created with `deltalake`; it is not a Spark/Databricks table. If the Bronze data is refreshed, commit and push the complete updated table directories together with any relevant schema or code changes. Repeated large data updates can grow Git history; consider Git LFS or shared object storage if the snapshot becomes substantially larger.
 
 ## Team collaboration
 
@@ -105,13 +124,13 @@ These generated data files are local runtime artifacts and should not be committ
 
 ## Team
 
-| Member | Responsibility |
-|---|---|
-| Mouli | Architecture, source preparation, Bronze ingestion and integration coordination |
-| Aravinth S. | Data profiling, validation and Silver |
-| Sonu Singh | Feature engineering and Gold |
-| Rohit Totad | Feature store and recommendation model |
-| Aman | Orchestration, integration testing and monitoring |
+| Member      | Responsibility                                                                  |
+| ----------- | ------------------------------------------------------------------------------- |
+| Mouli       | Architecture, source preparation, Bronze ingestion and integration coordination |
+| Aravinth S. | Data profiling, validation and Silver                                           |
+| Sonu Singh  | Feature engineering and Gold                                                    |
+| Rohit Totad | Feature store and recommendation model                                          |
+| Aman        | Orchestration, integration testing and monitoring                               |
 
 ## Status
 

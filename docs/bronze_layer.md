@@ -66,7 +66,25 @@ Every step goes to the console and a timestamped log file; one row per file/snap
 
 Read from Python with `DeltaTable("data/lake/bronze/transactions").to_pyarrow_table()`.
 
-## 5. Batch processing demonstration and results
+## 5. Sharing the Bronze snapshot with downstream members
+
+The current Bronze snapshot is stored in the repository under `data/lake/bronze/` so downstream members can use it without downloading the source workbook or rebuilding the staged batches. Commit and share each table directory in full, including both `_delta_log/` and the referenced Parquet files. Do not copy only the Parquet files: the Delta transaction log defines the table state.
+
+After pulling the branch containing the snapshot, a downstream member can read a table from the repository root with the installed project dependencies:
+
+```python
+from deltalake import DeltaTable
+
+transactions = DeltaTable("data/lake/bronze/transactions").to_pyarrow_table()
+```
+
+The same pattern applies to `product_catalog`, `product_popularity`, and `ingestion_log`. These are local Delta files, not a shared remote table or Databricks-managed table.
+
+Only `data/lake/bronze/` should be staged for this handoff. The source workbook, `data/raw/`, `data/landing/`, `data/rejected/`, and `data/logs/` are local preparation/runtime artifacts and are not required to consume the committed Bronze tables. Since `data/` is not ignored, stage the intended directory explicitly (for example, `git add data/lake/bronze`) and inspect `git status --short` before committing.
+
+Avoid running the demo with `--reset` in a checkout where the shared snapshot is needed: reset deletes local Bronze tables and landing/rejected data. If a new Bronze snapshot is produced, share complete updated table directories. Frequent large snapshots may make Git history grow; use Git LFS or shared object storage if that becomes a problem.
+
+## 6. Batch processing demonstration and results
 
 Run: `python notebooks/02_bronze_ingestion.py --reset` (about a minute; most of it is deliberate retry back-off).
 
@@ -85,10 +103,10 @@ Run: `python notebooks/02_bronze_ingestion.py --reset` (about a minute; most of 
 Final checks: 541,909 transactions, 4,070 products, 8,140 popularity rows (2 snapshots), 0 duplicate keys in every table (`Bronze verification PASSED`).
 Bronze preserved the source faithfully: 135,080 NULL `CustomerID`, 1,454 NULL `Description`, 5,268 exact duplicate lines.
 
-## 6. Known data-quality issues passed to Silver
+## 7. Known data-quality issues passed to Silver
 Missing `CustomerID` (135,080 rows), missing `Description` (1,454), 5,268 exact duplicate source lines, cancelled invoices (`InvoiceNo` starting with `C`), negative `Quantity`, zero `UnitPrice`. The popularity table holds several snapshots per product; Silver/Gold should pick the latest `as_of` for current popularity.
 
-## 7. Evidence ([docs/evidence/](evidence/))
+## 8. Evidence ([docs/evidence/](evidence/))
 Generated from the clean `--reset` run of 18 Nov 2026 (15:27). Each item is a `.png` (for the report) with a `.txt` twin (copy-paste).
 
 | File | Shows |
