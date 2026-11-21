@@ -2,6 +2,5 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .personal/
-data/
 spark-warehouse/
 metastore_db/
